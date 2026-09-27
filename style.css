@@ -1,0 +1,333 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #222;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 25px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  color: #00bcd4;
+}
+
+.home {
+  text-align: center;
+  padding: 60px;
+}
+.page-title {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.cards {
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: stretch;
+  padding: 20px 40px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px;
+}
+
+.card-content h2 {
+  margin-top: 0;
+}
+
+.card-content p {
+  flex: 1;
+  line-height: 1.5;
+}
+
+.card button {
+  padding: 10px;
+  border: none;
+  background-color: #222;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+.grid-page {
+  min-height: 100vh;
+  display: grid;
+
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: 80px 1fr 60px;
+
+  grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+}
+
+.grid-header {
+  grid-area: header;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 40px;
+  background-color: #222;
+  color: white;
+}
+
+.grid-header nav {
+  display: flex;
+  gap: 25px;
+}
+
+.grid-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.grid-header a:hover {
+  color: #00bcd4;
+}
+
+.grid-sidebar {
+  grid-area: sidebar;
+
+  padding: 30px 20px;
+  background-color: #eeeeee;
+}
+
+.grid-sidebar p {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.grid-main {
+  grid-area: main;
+
+  padding: 40px;
+}
+
+.content-box {
+  padding: 25px;
+  margin-top: 25px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+}
+
+.grid-footer {
+  grid-area: footer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-color: #222;
+  color: white;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px 40px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 15px;
+
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  text-align: center;
+
+  transform: translateY(100%);
+  transition: 0.3s;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.gallery-item:hover .caption {
+  transform: translateY(0);
+}
+.portfolio-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 40px;
+
+  background-color: #222;
+  color: white;
+}
+
+.portfolio-header nav {
+  display: flex;
+  gap: 25px;
+}
+
+.portfolio-header a {
+  color: white;
+  text-decoration: none;
+}
+
+.portfolio-header a:hover {
+  color: #00bcd4;
+}
+
+
+.portfolio-layout {
+  display: grid;
+
+  grid-template-columns: 1fr 280px;
+
+  gap: 30px;
+
+  padding: 40px;
+}
+
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+
+.projects h1 {
+  margin-top: 0;
+}
+
+
+.project-card {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 25px;
+
+  background-color: #f5f5f5;
+
+  border-radius: 10px;
+}
+
+
+.project-card h2 {
+  margin-top: 0;
+}
+
+
+.project-card p {
+  margin-bottom: 0;
+}
+
+
+.project-card button {
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 5px;
+
+  background-color: #222;
+  color: white;
+
+  cursor: pointer;
+}
+
+
+.project-card button:hover {
+  background-color: #444;
+}
+
+
+.portfolio-sidebar {
+  padding: 25px;
+
+  background-color: #eeeeee;
+
+  border-radius: 10px;
+}
+
+
+.portfolio-sidebar li {
+  margin-bottom: 10px;
+}
+
+
+.portfolio-footer {
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  min-height: 60px;
+
+  background-color: #222;
+  color: white;
+}
